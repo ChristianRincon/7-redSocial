@@ -1,0 +1,337 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    width: 100%;
+    max-width: 1000px;
+    margin: 0 auto;
+    background-color: rgba(13, 28, 57, 0.786);
+}
+
+video{
+    position: fixed;
+    right: 0;
+    bottom: 0;
+    min-width: 105%;
+    min-height: 100%;
+    transform: translateX(calc((100% - 100vw) / 2));
+    z-index: -2;
+}
+
+header{
+    height: 16vh;
+    width: 100%;
+    margin: 20px 0px;
+}
+
+header div .headerFormularios{
+    display: flex;
+    width: 100%;
+    margin-left: 16%;
+}
+
+header div .headerFormularios h1{
+    font-size: 3rem;
+    color: #FFF;
+    margin-top: 3%;
+}
+
+header #logo{
+    height: 16vh;
+    float: left;
+}
+
+header #logo img{
+    height: 16vh;
+}
+
+header .menu{
+    height: 16vh;
+    float: right;
+}
+
+header .menu ul li{
+    list-style: none;
+    display: flex;
+    float: left;
+    border: 2px solid #000;
+}
+
+header .menu ul li a{
+    background: #6e050e;
+    text-decoration: none;
+    padding: 10px 15px;
+    color: #fff;
+    font-size: 1rem;
+    border: 2px solid #000;
+}
+
+header .menu ul li a:hover{
+    background: #2d2f38;
+    color: #fff;
+    box-shadow: 1px 2px 40px 15px wheat;
+}
+
+#perfil{
+    height: 40vh;
+    margin: 20px 0px;
+    border: 2px solid #000;
+}
+
+#perfil img{
+    height: 35vh;
+    width: 30vh;
+    float: left;
+    /*border-radius: 500rem;*/
+    border: 2px solid #000;
+}
+
+#perfil h1{
+    text-transform: capitalize;
+    font-size: 3.1rem;
+    color: #a0a4b9;
+    text-align: center;
+}
+
+#perfil p{
+    color: #a0a4b9;
+    text-align: center;
+    font-size: 1.5em;
+    margin-top: 5%;
+}
+
+#recuadros{
+    width: 100%;
+    max-width: 900px;
+    overflow: hidden;
+    margin: 20px 0px;
+    text-align: center;
+    border: 1px solid #000;
+}
+
+#recuadros .tituloBuscar{
+    margin-top: 5%;
+    margin-bottom: 5%;
+}
+
+#recuadros .recuadro{
+   width: 300px;
+   overflow: hidden;
+   float: left;
+   padding: 5px;
+   text-align: center;
+   justify-content: center;
+   color: #2d2f38;
+   margin-left: 10%;
+   margin-right: 8px; 
+   border: 1px solid #000;
+}
+
+#recuadros .recuadro img{
+ height: 200px;
+ width: 300px;
+}
+
+/*#recuadros .recuadro img:hover{
+    transform: scale(1.2);
+    transition-duration: 300ms;
+    opacity: 0.8;
+   }
+*/
+
+#recuadros .recuadro.parrafo{
+    color: #2d2f38;
+    text-align: justify;
+    border: 2px solid #000;
+}
+
+#recuadros .recuadro h2{
+    text-transform: capitalize;
+    padding: 5% 10% 10% 10%;
+}
+
+#recuadros .recuadro .perfilAmigos{
+    height: 200px;
+    width: 200px;
+}
+
+.boton{
+    text-decoration: none;
+    border: 1px solid #2d2f38;
+    padding: 15px 20px;
+    background: #6e050e;
+    color: #fff;
+}
+
+.boton:hover{
+    background: #2d2f38;
+    color: #fff;
+}
+
+#formularioInicio{
+    background-color: #2d2f38;
+    color: #FFF;
+    width: 432px;
+    height: auto;
+    overflow: hidden;
+    padding: 5px;
+    text-align: center;
+    margin: auto;
+    box-shadow: 2px 4px 25px 10px white;
+    border-radius: 25px;
+}
+
+#formularioInicio h2{
+    text-align: center;
+    padding-top: 4%;
+    padding-bottom: 4%;
+}
+
+#formularioInicio input{
+    background-color: #767b8f;
+    height: 3em;
+    width: 90%;
+    margin-top:5%;
+    padding: 2%;
+}
+
+#formularioInicio input:focus{
+    transition: 700ms;
+    background-color: #0e8397;
+    box-shadow: 2px 2px 43px 4px #051d6e;
+    color: #FFF;
+    font-size: 105%;
+}
+
+#formularioInicio ::placeholder{
+    color: #FFF;
+}
+
+#formularioInicio .boton{
+    width: 50%;
+    text-decoration: none;
+    border: 1px solid #2d2f38;
+    padding: 15px 20px;
+    background: #6e050e;
+    color: #fff;
+}
+
+#formularioInicio .boton:hover{
+    width: 50%;
+    background-color: rgb(35, 4, 4);
+    box-shadow: 1px 1px 8px 2px white;
+    transform: scale(1.05);
+    transition: 700ms;
+}
+
+#formularioInicio .linkInicio{
+    color: #77e2cb;
+    font-size: 22px;
+    text-decoration: none;
+}
+
+#formularioRegistro{
+    background-color: #2d2f38;
+    color: #FFF;
+    width: 432px;
+    height: auto;
+    overflow: hidden;
+    padding: 5px;
+    text-align: center;
+    margin: auto;
+    box-shadow: 2px 4px 25px 10px white;
+    border-radius: 25px;
+}
+
+#formularioRegistro h2{
+    text-align: center;
+    padding-top: 4%;
+    padding-bottom: 4%;
+}
+
+#formularioRegistro input{
+    background-color: #767b8f;
+    height: 3em;
+    width: 90%;
+    margin-top:5%;
+    padding: 2%;
+    color: #FFF;
+}
+
+#formularioRegistro input:focus{
+    transition: 700ms;
+    background-color: #0e8397;
+    box-shadow: 2px 2px 43px 4px #051d6e;
+    color: #FFF;
+    font-size: 105%;
+}
+
+#formularioRegistro ::placeholder{
+    color: #FFF;
+}
+
+#formularioRegistro .botonRegistrar{
+    width: 50%;
+    text-decoration: none;
+    border: 1px solid #2d2f38;
+    padding: 15px 20px;
+    background: #266e05;
+    color: #fff;
+}
+
+#formularioRegistro .botonRegistrar:hover{
+    width: 50%;
+    background-color: rgba(4, 35, 7, 0.616);
+    box-shadow: 1px 1px 8px 2px rgb(101, 245, 6);
+    transform: scale(1.05);
+    transition: 700ms;
+}
+
+#formularioRegistro .botonBorrar{
+    width: 50%;
+    text-decoration: none;
+    border: 1px solid #2d2f38;
+    padding: 15px 20px;
+    background: #fa0606b0;
+    color: #fff;
+}
+
+#formularioRegistro .botonBorrar:hover{
+    width: 50%;
+    background-color: rgb(92, 5, 5);
+    box-shadow: 1px 1px 8px 2px rgb(255, 8, 8);
+    transform: scale(1.05);
+    transition: 700ms;
+}
+
+#formularioRegistro textarea{
+    background-color: #767b8f;
+    color: #FFF;
+    width: 95%;
+    resize: none;
+}
+
+#formularioRegistro textarea:focus{
+    transition: 700ms;
+    background-color: #0e8397;
+    box-shadow: 2px 2px 43px 4px #051d6e;
+    color: #FFF;
+    font-size: 105%;
+}
+
+#formularioRegistro .linkRegistro{
+    color: #77e2cb;
+    font-size: 22px;
+    text-decoration: none;
+}
+
+footer{
+    color: #FFF;
+    height: 8vh;
+    width: 100%;
+    max-width: 900px;
+    text-align: center;
+    font-size: 15px;
+}

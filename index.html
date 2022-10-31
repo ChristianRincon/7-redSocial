@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="../7-redSocial/css/estilo.css">
+    <title>Inicio</title>
+</head>
+<body>
+    <header>
+        <div id="logo">
+            <div class="headerFormularios">
+                <img src="../7-redSocial/images/logo.png" alt="logo">
+                <h1>BIENVENIDO A SOCIALITY</h1>
+            </div>
+        </div>
+    </header><br><br>
+
+    <video src="../7-redSocial/video/fondo_web.mp4" autoplay="true" muted="true" loop="true"></video>
+   
+    <section id="formularioInicio">
+        <h2>Inicio de sesión</h2>
+
+        <form name="contacto" action="../7-redSocial/php/iniciarSesion.php" method="post">
+      
+            <input type="text" name="nickname" placeholder="Ingrese su usuario" required><br>
+
+            <input type="password" name="contraseña" autocomplete="off" placeholder="Ingrese su contraseña" required><br><br>
+            <hr>
+            <input type="submit" name="enviar" class="boton" value="Iniciar Sesión"><br><br>
+
+            <label> ¿No posee cuenta? <a href="../7-redSocial/registro.html" class="linkInicio"> Regístrese aquí </a></label><br><br>
+        </form>
+    </section><br><br><br>
+
+    <footer>
+        <p>Copyright © 2022 - Sociality</p>
+    </footer>
+
+
+</body>
+</html>
