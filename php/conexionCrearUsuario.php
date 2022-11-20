@@ -16,13 +16,13 @@ $queryID = mysqli_query($conexion, $queryNickname);
 $showData = mysqli_fetch_array($queryID);
 
 if(!$showData){
-    $createUser = "INSERT INTO persona VALUES ('$nickname', '$nombre', '$apellido', '$edad', '$descripcion', '$fotoPerfil', '$email', '$passwordHash')";
+    $createUser = "INSERT INTO persona VALUES ('$nickname', LOWER('$nombre'), LOWER('$apellido'), '$edad', '$descripcion', '$fotoPerfil', '$email', '$passwordHash')";
 
     if(mysqli_query($conexion, $createUser)){
         mkdir("../images/$nickname");
         copy("../images/default.png", "../images/$nickname/perfil.png");
-        echo "Registro exitoso";
-        echo "<br> <a href = '../index.html'> Iniciar sesión </a> </div>"; 
+        echo "Registro exitoso <br>";
+        echo "<a href = '../index.html'> Iniciar sesión </a> </div>"; 
     }else{
         echo "Error: " . $createUser . "<br>" . mysqli_error($conexion);
     }

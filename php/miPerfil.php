@@ -10,6 +10,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" type="text/css" href="../css/estilo.css">
+    <script src="https://kit.fontawesome.com/2c36e9b7b1.js" crossorigin="anonymous"></script>
     <title> Mi perfil </title>
 </head>
 <body>
@@ -18,7 +19,13 @@
             <img src="../images/logo.png" alt="logo">
         </div>
         <nav class="menu">
-            <ul>               
+            <ul>
+                <li>
+                    <button class="switch" id="switch">
+                        <span><i class="fas fa-sun"></i></span>
+                        <span><i class="fas fa-moon"></i></span>
+                    </button>
+                </li>        
                 <li><a href="../php/miPerfil.php"> Mi perfil</a></li>
                 <li><a href="../php/amigos.php"> Mis amigos</a></li>
                 <li><a href="../php/fotos.php"> Mis fotos</a></li>
@@ -28,10 +35,13 @@
         </nav>
     </header>
 
+    <video src="../video/claro_web.mp4" autoplay="true" muted="true" loop="true" id="video"></video>
+
     <section id="perfil">
         <img src="<?php echo "$_SESSION[fotoPerfil]" ?>" alt="Mi perfil">
         <h1> <?php echo "$_SESSION[nombre]" ." ". "$_SESSION[apellido]" ?> </h1>
-        <p> <?php echo "$_SESSION[descripcion]" ?> </p>
+        <p> <?php echo "$_SESSION[descripcion]" ?> </p><br><br>
+        <a href="../php/descripcion.php" class="boton-descripcion">Modificar</a>
     </section>
 
     <section id="recuadros">
@@ -57,7 +67,7 @@
     </section>
 
     <section id="recuadros">
-        <h2>Mis fotos</h2>
+        <h2 class="tituloBuscar">Mis fotos</h2>
 
         <?php
         $queryFotos = "SELECT * FROM fotos f WHERE f.Nickname = '$nickname' LIMIT 3";
@@ -77,6 +87,8 @@
     <footer>
         <p>Copyright © 2022 - Sociality</p>
     </footer>
+
+    <script src="../js/main.js"></script>
 
     
 </body>

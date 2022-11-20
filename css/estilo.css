@@ -10,6 +10,13 @@ body{
     background-color: rgba(13, 28, 57, 0.786);
 }
 
+body.dark{
+    width: 100%;
+    max-width: 1000px;
+    margin: 0 auto;
+    transition: .4s ease all;
+}
+
 video{
     position: fixed;
     right: 0;
@@ -52,20 +59,72 @@ header .menu{
     float: right;
 }
 
-header .menu ul li{
+header .switch{
+    background: #343D5B;
+    border-radius: 1000px;
+    border: none;
+    position: relative;
+    cursor: pointer;
+    display: flex;
+    outline: none;
+    margin-right: 8em;
+    top: 20%;
+}
+
+header .switch::after{
+    content: "";
+    display: block;
+    width: 30px;
+    height: 30px;
+    position: absolute;
+    background: #F1F1F1;
+    top: 0;
+    left: 0;
+    right: unset;
+    border-radius: 100px;
+    transition: .3s ease all;
+    box-shadow: 0px 0px 2px 2px rgba(0,0,0,.2);
+}
+
+header .switch.active{
+    background: orange;
+    color: #000;
+}
+
+header .switch.active::after{
+    right: 0;
+    left: unset;
+}
+
+header .switch span{
+    width: 30px;
+    height: 30px;
+    line-height: 30px;
+    display: block;
+    background: none;
+    color: #fff;
+}
+
+header .menu ul{
     list-style: none;
+    margin: 0;
+    padding: 0;
     display: flex;
     float: left;
-    border: 2px solid #000;
+}
+
+header .menu li{
+    text-align: center;
+    border-right: 1px solid ;
 }
 
 header .menu ul li a{
     background: #6e050e;
     text-decoration: none;
-    padding: 10px 15px;
+    padding: 15px 25px;
     color: #fff;
     font-size: 1rem;
-    border: 2px solid #000;
+    display: block;
 }
 
 header .menu ul li a:hover{
@@ -75,36 +134,128 @@ header .menu ul li a:hover{
 }
 
 #perfil{
+    /*background-color: rgba(128, 128, 128, 0.827);*/
     height: 40vh;
     margin: 20px 0px;
-    border: 2px solid #000;
+    borde: 2px solid #000;
+    width: 100%;
+    background-color: #15eacd4d;
+    backdrop-filter: blur(3px);
+    -webkit-backdrop-filter: blur(3px);
 }
 
 #perfil img{
-    height: 35vh;
+    height: 100%;
     width: 30vh;
     float: left;
-    /*border-radius: 500rem;*/
-    border: 2px solid #000;
 }
 
 #perfil h1{
     text-transform: capitalize;
+    background-color: #000;
     font-size: 3.1rem;
     color: #a0a4b9;
     text-align: center;
 }
 
 #perfil p{
-    color: #a0a4b9;
+    color: #04060e;
+    background-color: rgb(240, 233, 233);
+    letter-spacing: 4px;
     text-align: center;
     font-size: 1.5em;
     margin-top: 5%;
+    margin-left: 35%;
+    width: 50%;
+}
+
+.boton-descripcion{
+    text-decoration: none;
+    border: 1px solid #2d2f38;
+    padding: 15px 20px;
+    background: #6e050e;
+    color: #fff;
+    margin-left: 35%;
+}
+
+#cambiarDescripcion textarea{
+    color: #FFF;
+    font-size: 25px;
+    resize: none;
+    width: 100%;  
+    border-radius: 5px;
+    box-shadow: 2px 2px 43px 4px #051d6e;
+    background-color: #15eacd4d;
+    backdrop-filter: blur(3px);
+    -webkit-backdrop-filter: blur(3px);
+}
+
+#cambiarDescripcion ::placeholder{
+    color: #FFF;
+    padding-left: 3%;
+    padding-top: 2%;
+}
+
+#cambiarDescripcion textarea:focus{
+    color: #FFF;
+    font-size: 25px;
+    resize: none;
+    width: 100%;  
+    border-radius: 5px;
+    background-color: #1520ea4d;
+    backdrop-filter: blur(3px);
+    -webkit-backdrop-filter: blur(3px);
+}
+
+#opciones-descripcion{
+    display: flex;
+    margin-left: 25%;
+}
+
+#cambiarDescripcion .botonRegistrar{
+    font-size: 1.1em;
+    width: 25%;
+    border: 1px solid #2d2f38;
+    padding: 15px 20px;
+    background: #266e05;
+    color: #fff;
+}
+
+#cambiarDescripcion .botonRegistrar:hover{
+    font-style: italic;
+    background-color: rgba(4, 35, 7, 0.616);
+    box-shadow: 1px 1px 8px 2px rgb(101, 245, 6);
+    transform: scale(1.4);
+    transition: 700ms;
+}
+
+#cambiarDescripcion .botonBorrar{
+    font-size: 1.1em;
+    text-decoration: none;
+    text-align: center;
+    width: 22%;
+    margin-left: 5em;
+    border: 1px solid #2d2f38;
+    padding: 15px 20px;
+    background: #fa0606b0;
+    color: #fff;
+}
+
+#cambiarDescripcion .botonBorrar:hover{
+    font-style: italic;
+    background-color: rgb(92, 5, 5);
+    box-shadow: 1px 1px 8px 2px rgb(255, 8, 8);
+    transform: scale(1.4);
+    transition: 700ms;
+}
+
+#perfil a{
+  text-decoration: none;  
 }
 
 #recuadros{
-    width: 100%;
-    max-width: 900px;
+    background-color: rgb(100, 77, 77);
+    max-width: 1000px;
     overflow: hidden;
     margin: 20px 0px;
     text-align: center;
@@ -112,26 +263,31 @@ header .menu ul li a:hover{
 }
 
 #recuadros .tituloBuscar{
+    background-color: #000;
+    color: #a0a4b9;
     margin-top: 5%;
-    margin-bottom: 5%;
+    margin-bottom: 2%;
 }
 
 #recuadros .recuadro{
-   width: 300px;
-   overflow: hidden;
-   float: left;
-   padding: 5px;
-   text-align: center;
-   justify-content: center;
-   color: #2d2f38;
-   margin-left: 10%;
-   margin-right: 8px; 
-   border: 1px solid #000;
+    width: 300px;
+    overflow: hidden;
+    float: left;
+    padding: 5px;
+    padding-bottom: 15px;
+    margin-bottom: 20px;
+    text-align: center;
+    justify-content: center;
+    color: #2d2f38;
+    margin-top: 5%;
+    margin-left: 10%;
+    margin-right: 8px; 
+    border: 1px solid rgb(250, 250, 250);
 }
 
 #recuadros .recuadro img{
- height: 200px;
- width: 300px;
+    height: 200px;
+    width: 300px;
 }
 
 /*#recuadros .recuadro img:hover{
@@ -203,6 +359,7 @@ header .menu ul li a:hover{
     box-shadow: 2px 2px 43px 4px #051d6e;
     color: #FFF;
     font-size: 105%;
+    font-style: italic;
 }
 
 #formularioInicio ::placeholder{
@@ -266,6 +423,7 @@ header .menu ul li a:hover{
     box-shadow: 2px 2px 43px 4px #051d6e;
     color: #FFF;
     font-size: 105%;
+    font-style: italic;
 }
 
 #formularioRegistro ::placeholder{
@@ -328,10 +486,14 @@ header .menu ul li a:hover{
 }
 
 footer{
-    color: #FFF;
+    color: rgb(8, 8, 8);
+    background-color: rgba(245, 245, 220, 0.21);
+    letter-spacing: 3px;
+    padding-top: 3%;
+    border-radius: 4px;
     height: 8vh;
     width: 100%;
-    max-width: 900px;
+    max-width: 1000px;
     text-align: center;
-    font-size: 15px;
+    font-size: 20px;
 }
